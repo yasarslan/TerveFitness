@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerveFitness</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Güncellendi -->
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">TerveFitness</div>
+    <button class="hamburger" id="hamburger-btn">
+        ☰
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Etusivu</a></li> <!-- Ana Sayfa -->
+        <li><a href="#programs">Harjoitusohjelmat</a></li> <!-- Antrenman Programları -->
+        <li><a href="#map-contact">Yhteystiedot</a></li> <!-- İletişim Bilgileri -->
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="overlay"></div> <!-- Karanlık ton için eklendi -->
+    <div class="hero-content">
+        <h1>Fitnessillä terveempi ja vahvempi sinä!</h1>
+        <p>Jos haluat elää terveellisesti, olet oikeassa paikassa aloittaaksesi kuntomatkasi. Tämä sivu tarjoaa sinulle tietoa, jonka avulla voit parantaa treenirutiinejasi, lisätä motivaatiotasi ja luoda itsellesi sopivan liikuntasuunnitelman.</p>
+    </div>
+</section>
+
+<!-- 3 lu bolum-->
+<section id="programs">
+    <div class="section section-1 left-image">
+        <div class="image-box"></div>
+        <div class="text-box">
+            <h2>Uusien Aloittelijoiden Fitness Suunnitelma</h2>
+            <p>Oletko aloittelija kuntosalilla? Ei hätää, jokainen alkaa jostain! Tämä ohjelma sisältää kaiken, mitä tarvitset – perusliikkeistä oikeanlaiseen ravintoon. Etene askel askeleelta suunnitelmamme avulla, vahvista lihaksiasi, paranna kestävyyttäsi ja omaksu terveellinen elämäntapa. Pidä motivaatiosi korkealla – sinä pystyt siihen!</p>
+        </div>
+    </div>
+
+    <div class="section section-2 right-image">
+        <div class="image-box"></div>
+        <div class="text-box">
+            <h2>Kardio- ja voimaharjoitukset</h2>
+            <p>Kestävyys ja lihasvoima ovat avainasemassa terveellisen ja tasapainoisen kehon saavuttamisessa. Kardioharjoitukset auttavat vahvistamaan sydäntäsi ja parantamaan kestävyyttäsi, kun taas voimaharjoittelu kehittää lihasmassaa ja lisää aineenvaihduntaa. Yhdistämällä nämä kaksi harjoitusmuotoa voit optimoida kehosi suorituskyvyn, polttaa tehokkaasti kaloreita ja parantaa kokonaisvaltaista hyvinvointiasi. Aloita harjoittelusi suunnitelmallisesti ja etene omassa tahdissasi – jokainen askel vie sinut lähemmäs tavoitteitasi!</p>
+        </div>
+    </div>
+
+    <div class="section section-3 left-image">
+        <div class="image-box"></div>
+        <div class="text-box">
+            <h2>Terveellinen ravitsemus</h2>
+            <p>Oikeanlainen ravitsemus on avainasemassa hyvinvoinnin ja optimaalisen suorituskyvyn kannalta. Tasapainoinen ruokavalio, joka sisältää monipuolisesti proteiineja, hiilihydraatteja ja terveellisiä rasvoja, tukee kehon toimintaa ja edistää palautumista. Hyvät ruokailutottumukset eivät ainoastaan auta saavuttamaan tavoitteitasi, vaan myös parantavat energiatasojasi ja yleistä terveyttäsi. Panosta ravintorikkaisiin aterioihin ja säännöllisiin ruokailuaikoihin – kehosi kiittää sinua!</p>
+        </div>
+    </div>
+</section>
+
+<!--anket bölumu-->
+<section class="poll-section">
+    <div class="poll-container" id="pollContainer">
+        <h2>Mikä on kuntotavoitteesi?</h2>
+        <form id="fitnessPoll">
+            <label class="poll-option">
+                <input type="radio" name="goal" value="muscle">
+                <span>Lihasmassan kasvattaminen</span>
+            </label>
+            <label class="poll-option">
+                <input type="radio" name="goal" value="weight-loss">
+                <span>Painonpudotus</span>
+            </label>
+            <label class="poll-option">
+                <input type="radio" name="goal" value="endurance">
+                <span>Kestävyyden parantaminen</span>
+            </label>
+            <button type="button" id="showResults">Näytä tulos</button>
+        </form>
+        <div id="poll-results" class="poll-results">
+            <p><strong>Lihasmassan kasvattaminen:</strong> <span id="muscle-result">0%</span></p>
+            <p><strong>Painonpudotus:</strong> <span id="weight-loss-result">0%</span></p>
+            <p><strong>Kestävyyden parantaminen:</strong> <span id="endurance-result">0%</span></p>
+        </div>
+    </div>
+
+    <div class="suggestion-container" id="suggestionContainer" style="display: none;">
+        <h3 id="suggestion-title"></h3>
+        <p id="suggestion-text"></p>
+        <a id="detailed-link" href="#" target="_blank" class="detailed-info">Lisätietoja</a>
+    </div>
+</section>
+
+<!-- HARITA bolumu -->
+<section id="map-contact" class="map-contact-section">
+    <div class="map-box">
+        <h3>Lähimmät kuntosalit sinulle</h3>
+        <p>Voit tarkastella lähimpiä kuntosaleja käyttämällä sijaintiasi.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=api"
+                allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="contact-box">
+        <h3>Ota yhteyttä</h3>
+        <p>Jos sinulla on kysyttävää, älä epäröi ottaa meihin yhteyttä.</p>
+        <p><strong>Osoite:</strong> KuntoKatu 123, Helsinki, Suomi</p>
+        <p><strong>Puhelin:</strong> +358 123 456 789</p>
+        <p><strong>Sähköposti:</strong> <a href="mailto:yasar.arsln@hotmail.com">yasar.arsln@hotmail.com</a></p>
+    </div>
+</section>
+
+<!-- Güncellenmiş Script Yolu -->
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
