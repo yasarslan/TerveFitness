@@ -62,7 +62,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* 🍔 Hamburger Butonu (Mobil) */
+/* Hamburger Butonu (Mobil) */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -211,7 +211,7 @@ body {
     line-height: 1.5;
 }
 
-/* 📱 Mobil Uyum */
+/*  Mobil Uyum */
 @media screen and (max-width: 900px) {
     .section {
         flex-direction: column;
@@ -228,7 +228,7 @@ body {
     }
 }
 
-/* 📝 Anket Bölümü */
+/*  Anket Bölümü */
 .poll-section {
     display: flex;
     justify-content: center;
@@ -313,6 +313,52 @@ body {
     text-align: center;
 }
 
+/* Mobil Uyum */
+@media screen and (max-width: 768px) {
+    .poll-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 5%;
+    }
+
+    .poll-container {
+        width: 90% !important;
+        max-width: 400px;
+        margin: 0 auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .suggestion-container {
+        width: 90% !important;
+        max-width: 400px;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+
+    .poll-option {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #showResults {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .poll-results p {
+        font-size: 14px;
+    }
+}
+
+/*anket sonuclari bitis */
+
 /* Harita Bölümü */
 .map-contact-section {
     display: flex;
@@ -332,6 +378,7 @@ body {
     text-align: center;
 }
 
+/* Google Harita */
 .map-box iframe {
     width: 100%;
     height: 300px;
@@ -339,66 +386,29 @@ body {
     border: none;
 }
 
-
-@media screen and (max-width: 768px) {
-    .poll-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-        padding: 30px 5%;
-    }
-
-    .poll-container {
-        width: 90%;
-        max-width: 400px;
-        margin: 0 auto !important; /* Kesin ortalanmasını sağla */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-    .poll-option {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    #showResults {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .poll-results p {
-        font-size: 14px;
-    }
-
-    .suggestion-container {
-        text-align: center;
-    }
-}
-
-
+/* 📱 Mobil Uyum */
 @media screen and (max-width: 768px) {
     .map-contact-section {
-        flex-direction: column;
-        align-items: center;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         text-align: center;
-        gap: 20px;
         padding: 30px 5%;
+        gap: 20px;
     }
 
     .map-box, .contact-box {
-        width: 90%;
-        max-width: 400px; /* Mobilde kutuların genişliği */
+        width: 90% !important;
+        max-width: 400px;
         text-align: center;
+        margin: 0 auto !important;
     }
 
     .map-box iframe {
-        width: 100%;
-        height: 250px;
+        width: 100% !important;
+        height: 250px !important;
         border-radius: 8px;
     }
 }
+

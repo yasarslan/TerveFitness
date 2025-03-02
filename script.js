@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    
+    // Başlangıçta sonuçları gizle
     pollResults.style.display = "none";
     suggestionContainer.style.display = "none";
 
-    
+    // Anket Seçenekleri ve Sonuçlar
     const results = {
         muscle: 45.3,
         "weight-loss": 15.3,
@@ -95,7 +95,7 @@ function initMap() {
                     icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
                 });
 
-                
+                // En yakın spor salonlarını aramak için Google Places API kullan
                 let request = {
                     location: userLocation,
                     radius: 5000, // 5km çapında spor salonlarını bul
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function centerPoll() {
         if (window.innerWidth <= 768) {
-            pollContainer.style.margin = "0 auto"; // Mobilde ortala
+            pollContainer.style.margin = "0 auto";
             pollContainer.style.display = "flex";
             pollContainer.style.flexDirection = "column";
             pollContainer.style.alignItems = "center";
@@ -165,9 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("showResults").addEventListener("click", function () {
-        setTimeout(centerPoll, 100); 
+        setTimeout(centerPoll, 100);
     });
 
-    window.addEventListener("resize", centerPoll); 
-    centerPoll(); 
+    window.addEventListener("resize", centerPoll);
+    centerPoll();
 });
