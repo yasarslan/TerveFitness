@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Başlangıçta sonuçları gizle
+    
     pollResults.style.display = "none";
     suggestionContainer.style.display = "none";
 
-    // Anket Seçenekleri ve Sonuçlar
+    
     const results = {
         muscle: 45.3,
         "weight-loss": 15.3,
