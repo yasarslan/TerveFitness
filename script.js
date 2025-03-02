@@ -95,7 +95,7 @@ function initMap() {
                     icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
                 });
 
-                // En yakın spor salonlarını aramak için Google Places API kullan
+                
                 let request = {
                     location: userLocation,
                     radius: 5000, // 5km çapında spor salonlarını bul
@@ -165,9 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("showResults").addEventListener("click", function () {
-        setTimeout(centerPoll, 100); // Butona basıldıktan sonra ortalamayı tekrar uygula
+        setTimeout(centerPoll, 100); 
     });
 
-    window.addEventListener("resize", centerPoll); // Ekran değiştiğinde tekrar uygula
-    centerPoll(); // Sayfa yüklendiğinde kontrol et
+    window.addEventListener("resize", centerPoll); 
+    centerPoll(); 
 });
