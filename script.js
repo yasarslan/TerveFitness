@@ -1,4 +1,4 @@
-
+//anket bolumu
 // Anket Bölümü
 document.addEventListener("DOMContentLoaded", function () {
     const pollContainer = document.getElementById("pollContainer");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("detailed-link").href = suggestionLink;
 
         // Anketi Sola Kaydır ve Öneriyi Göster
-        pollContainer.style.transform = "translateX(-80px)";
+       // pollContainer.style.transform = "translateX(-80px)";
         suggestionContainer.style.display = "block";
     });
 });
