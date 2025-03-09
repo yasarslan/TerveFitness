@@ -1,7 +1,7 @@
 
 
 //anket bolumu
-// Anket Bölümü
+
 document.addEventListener("DOMContentLoaded", function () {
     const pollContainer = document.getElementById("pollContainer");
     const suggestionContainer = document.getElementById("suggestionContainer");
