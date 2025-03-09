@@ -2,21 +2,21 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Genel Stil Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Genel Yazı Tipi ve Arka Plan */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ body {
     z-index: 1000;
 }
 
-/* Navbar Logo */
+
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
@@ -38,7 +38,7 @@ body {
     text-decoration: none;
 }
 
-/* Navbar Menü (Masaüstü) */
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -62,7 +62,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* Hamburger Butonu (Mobil) */
+
 .hamburger {
     display: none;
     font-size: 30px;
@@ -72,7 +72,7 @@ body {
     cursor: pointer;
 }
 
-/* 🌐 Mobil Görünüm */
+
 @media screen and (max-width: 768px) {
     .navbar ul {
         display: none;
@@ -106,7 +106,7 @@ body {
     }
 }
 
-/* Hero Bölümü */
+
 .hero {
     position: relative;
     width: 100%;
@@ -118,7 +118,7 @@ body {
     text-align: center;
 }
 
-/* Karanlık Arka Plan */
+
 .overlay {
     position: absolute;
     width: 100%;
@@ -128,7 +128,7 @@ body {
     left: 0;
 }
 
-/* Hero İçeriği */
+
 .hero-content {
     position: relative;
     color: white;
@@ -149,7 +149,7 @@ body {
 }
 
 /* 3'lü Bölüm */
-/* Genel Bölüm Stili */
+
 .section {
     display: flex;
     align-items: center;
@@ -159,17 +159,17 @@ body {
     gap: 30px;
 }
 
-/* Resim Sol - Yazı Sağ */
+
 .left-image {
     flex-direction: row;
 }
 
-/* Resim Sağ - Yazı Sol */
+
 .right-image {
     flex-direction: row-reverse;
 }
 
-/* Resimler İçin Background */
+
 .image-box {
     width: 50%;
     height: 350px;
@@ -178,22 +178,22 @@ body {
     border-radius: 10px;
 }
 
-/* Bölüm 1: Fitness Planı */
+
 .section-1 .image-box {
     background-image: url('assets/kuva2.jpg');
 }
 
-/* Bölüm 2: Kardiyo ve Güç Antrenmanı */
+
 .section-2 .image-box {
     background-image: url('assets/kuva3.jpg');
 }
 
-/* Bölüm 3: Sağlıklı Beslenme */
+
 .section-3 .image-box {
     background-image: url('assets/kuva4.jpg');
 }
 
-/* Yazı Alanı */
+
 .text-box {
     width: 50%;
     padding: 20px;
@@ -211,7 +211,7 @@ body {
     line-height: 1.5;
 }
 
-/*  Mobil Uyum */
+
 @media screen and (max-width: 900px) {
     .section {
         flex-direction: column;
@@ -244,7 +244,7 @@ body {
     margin-top: 40px;
 }
 
-/* Anket Kutusu */
+
 .poll-container {
     background: white;
     padding: 25px;
@@ -255,7 +255,7 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Anket Seçenekleri */
+
 .poll-option {
     display: flex;
     align-items: center;
@@ -277,7 +277,7 @@ body {
     margin-right: 10px;
 }
 
-/* Sonucu Göster Butonu */
+
 #showResults {
     background-color: #28a745;
     color: white;
@@ -295,7 +295,7 @@ body {
     background-color: #218838;
 }
 
-/* Anket Sonuçları */
+
 .poll-results {
     margin-top: 15px;
     font-size: 14px;
@@ -315,6 +315,29 @@ body {
     transition: transform 0.5s ease-in-out, opacity 0.3s;
     text-align: center;
 }
+
+.detailed-info {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.detailed-info:hover {
+    background-color: #218838;
+}
+
+
+
 
 /* Mobil Uyum */
 @media screen and (max-width: 768px) {
@@ -363,6 +386,9 @@ body {
 
 
 /*anket sonuclari bitis */
+
+/* Harita Bölümü */
+
 
 /* Harita Bölümü */
 .map-contact-section {
@@ -416,4 +442,5 @@ body {
         border-radius: 8px;
     }
 }
+
 

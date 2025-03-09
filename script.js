@@ -1,3 +1,5 @@
+
+
 //anket bolumu
 // Anket Bölümü
 document.addEventListener("DOMContentLoaded", function () {
@@ -46,15 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
         if (selectedValue === "muscle") {
             suggestionTitle = "Lihasmassan kasvattaminen";
             suggestionText = "Lihasmassan kasvattamiseksi sinun tulisi keskittyä korkeaproteiiniseen ruokavalioon ja voimaharjoitteluun.";
-            suggestionLink = "kas-gelistirme.html";
+            suggestionLink = "lihasmassan.html";
         } else if (selectedValue === "weight-loss") {
             suggestionTitle = "Painonpudotus";
             suggestionText = "Painonpudotus vaatii tasapainoista ruokavaliota, säännöllistä kardiotreeniä ja kalorien saannin tarkkailua.";
-            suggestionLink = "kilo-verme.html";
+            suggestionLink = "painonpudotus.html";
         } else if (selectedValue === "endurance") {
             suggestionTitle = "Kestävyyden parantaminen";
             suggestionText = "Kestävyyden parantamiseksi kannattaa keskittyä HIIT-harjoituksiin ja pitkäkestoisiin matalatehoisiin hareketlere.";
-            suggestionLink = "dayaniklilik.html";
+            suggestionLink = "kestavyys.html";
         }
 
         document.getElementById("suggestion-title").textContent = suggestionTitle;
@@ -70,72 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //HARITA BOLUMU
 
+
+
 // Harita Başlatma Fonksiyonu
-function initMap() {
-    // Kullanıcının konumunu al
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            function (position) {
-                let userLocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                };
-
-                // Haritayı oluştur
-                let map = new google.maps.Map(document.getElementById("map"), {
-                    center: userLocation,
-                    zoom: 14,
-                });
-
-                // Kullanıcının konumuna marker ekle
-                let userMarker = new google.maps.Marker({
-                    position: userLocation,
-                    map: map,
-                    title: "Sinun Sijainti",
-                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-                });
-
-                // En yakın spor salonlarını aramak için Google Places API kullan
-                let request = {
-                    location: userLocation,
-                    radius: 5000, // 5km çapında spor salonlarını bul
-                    type: ["gym"],
-                };
-
-                let service = new google.maps.places.PlacesService(map);
-                service.nearbySearch(request, function (results, status) {
-                    if (status === google.maps.places.PlacesServiceStatus.OK) {
-                        for (let i = 0; i < results.length; i++) {
-                            createMarker(results[i], map);
-                        }
-                    }
-                });
-            },
-            function () {
-                alert("Sijaintia ei saatu! Tarkista sijainnin käyttöoikeudet.");
-            }
-        );
-    } else {
-        alert("Selaimesi ei tue sijaintipalvelua.");
-    }
-}
-
-// Spor salonları için marker ekleyen fonksiyon
-function createMarker(place, map) {
-    let marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location,
-        title: place.name,
-    });
-
-    let infowindow = new google.maps.InfoWindow({
-        content: "<strong>" + place.name + "</strong><br>" + place.vicinity,
-    });
-
-    marker.addListener("click", function () {
-        infowindow.open(map, marker);
-    });
-}
 
 //HARITA BOLUMU SONU
 
