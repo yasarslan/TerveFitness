@@ -110,3 +110,16 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", centerPoll);
     centerPoll();
 });
+
+
+// Form Gönderildiğinde form gizlenir ve başarılı mesaj gösterilir
+function handleSubmit(event) {
+    event.preventDefault();
+
+
+    document.querySelector(".feedback-form").style.display = "none";
+
+
+    document.getElementById("successMessage").style.display = "block";
+}
+
